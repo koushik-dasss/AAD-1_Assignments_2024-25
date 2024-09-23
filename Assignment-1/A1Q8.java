@@ -13,5 +13,4 @@ public class A1Q8 {
         System.out.println("The "+ n +" th fibonacci number is : "+ sum );
         sc.close();
     }
-    
 }
