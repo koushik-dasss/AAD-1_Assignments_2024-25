@@ -1,6 +1,6 @@
-// Write a JAVA program to implement binary search without recursion.
-import java.util.Scanner;
-public class A6Q3 {
+// Write a JAVA program to implement binary search using recursion
+import java.util.*;
+public class A6Q4 {
     public static int [] bubbleSort(int [] arr) {
         int n = arr.length;
         for(int i = 0 ; i < n ; i++){
@@ -14,15 +14,15 @@ public class A6Q3 {
         }
         return arr;
     }
-    public static int BinarySearchIteration(int[] arr , int low , int high , int ele){
+    public static int BinarySearchRecursion(int [] arr , int low , int high , int ele){
         while(low<=high){
             int mid = low+(high-low)/2;
             if(arr[mid]==ele){
                 return mid;
             }else if(arr[mid]<ele){
-                low = mid+1;
+                return BinarySearchRecursion(arr, mid+1 , high, ele);
             }else{
-                high = mid-1;
+                return BinarySearchRecursion(arr, low, mid-1, ele);
             }
         }
         return -1;
@@ -50,7 +50,7 @@ public class A6Q3 {
         System.out.println("Enter the element to be found : ");
         int ele = sc.nextInt();
         int low = 0 , high = arr.length - 1;
-        int index = BinarySearchIteration(arr , low , high , ele);
+        int index = BinarySearchRecursion(arr , low , high , ele);
         System.out.println("The element is found at index : "+ index);
         sc.close();
     }
