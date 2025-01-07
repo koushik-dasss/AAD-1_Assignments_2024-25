@@ -50,8 +50,12 @@ public class A6Q3 {
         System.out.println("Enter the element to be found : ");
         int ele = sc.nextInt();
         int low = 0 , high = arr.length - 1;
-        int index = BinarySearchIteration(arr , low , high , ele);
-        System.out.println("The element is found at index : "+ index);
+        int result = BinarySearchIteration(arr , low , high , ele);
+        if(result!=-1){
+            System.out.println("The element is"+ ele+ " found at index : "+result);
+        }else{
+            System.out.println("The element is not found in the array");
+        }
         sc.close();
     }
 }

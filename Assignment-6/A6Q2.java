@@ -1,7 +1,8 @@
+// Write a JAVA program to implement linear search using recursion.
 import java.util.*;
 public class A6Q2 {
     public static int LinearSearchRecursion(int[] arr , int ele, int index){
-       if(index > arr.length){
+       if(index > arr.length){ // index > arr.length means element is not found in the array
         return -1;
        }else if(arr[index]==ele){
         return index;

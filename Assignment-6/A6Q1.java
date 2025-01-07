@@ -26,7 +26,12 @@ public class A6Q1 {
         System.out.println();
         System.out.println("Enter the element to be found : ");
         int ele = sc.nextInt();
-        System.out.println("The element "+ ele + " is found at  "+ LinearSearchIteration(arr, ele) + " position of the array");
+        int result = LinearSearchIteration(arr, ele);
+        if(result!=-1){
+            System.out.println("The element is"+ ele+ " found at index : "+result);
+        }else{
+            System.out.println("The element is not found in the array");
+        }
         sc.close();
     }
 }
